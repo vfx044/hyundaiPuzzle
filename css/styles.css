@@ -29,7 +29,7 @@ body {
   position: absolute;
   top: 10px;
   width: 200px;
-  z-index: 999;
+  z-index: 9999;
 }
 
 @media screen and (min-width: 800px) {
