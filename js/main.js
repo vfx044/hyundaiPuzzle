@@ -48,7 +48,7 @@ const divTextInstructions = document.getElementById("divTextInstructions");
 const buttonBack = document.getElementById("class_buttonPrev");
 const buttonNext = document.getElementById("class_buttonNext");
 
-const _totalOfPieces = 1;
+const _totalOfPieces = 21;
 
 let _time = "";
 let _timeStamp = "";
