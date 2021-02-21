@@ -11,18 +11,47 @@ body{
   display: flex;
   justify-content: center;
   .divCronometro {
-    background: #012c5f;
-    color: #fff;
-    text-align: left;
-    padding: 16px 24px;
+    background: #7da5eb;
+    display: flex;
+    font-weight: normal;
+    justify-content: center;
+    line-height: 30px;
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    z-index: 9;
+    @media screen and (min-width:800px){
+      background: #012c5f;
+      flex-direction: column;
+      font-size: 20px;
+      align-items: center;
+      padding: 12px 16px;
+      position: relative;
+      top: 0;
+    }
     p {
       color: #fff;
       margin: 0;
+      @media screen and (max-width:799px){
+        &.desktop {
+          display: none;
+        }
+      }
+      @media screen and (min-width:800px){
+        &.mobile {
+          display: none;
+        }
+      }
     }
-    #divTiempo {
-      font-weight: 500;
-      font-size: 20px;
-      padding-left: 17%;
+    #chronotime {
+      display: block;
+      width: 72px;
+      padding-left: 2px;
+      color: #fff;
+      @media screen and (min-width:800px){
+        font-weight: 500;
+        width: 100px;
+      }
     }
   }
 }
@@ -36,6 +65,10 @@ body{
 }
 
 .divInstrucciones{
+  display: none;
+  @media screen and (min-width:800px){
+    display: block;
+  }
   p {
     color: #012c5f;
     text-align: center;
@@ -54,6 +87,9 @@ body{
     width: 32px;
     svg {
       width: 12px;
+      path {
+        fill: #012c5f;
+      }
     }
     @media screen and (min-width:800px){
       width: 48px;
