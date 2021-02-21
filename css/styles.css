@@ -17,10 +17,36 @@ body {
 }
 
 #divCronometro .divCronometro {
-  background: #012c5f;
-  color: #fff;
-  text-align: left;
-  padding: 16px 24px;
+  background: #7da5eb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: normal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 30px;
+  position: absolute;
+  top: 10px;
+  width: 200px;
+  z-index: 9;
+}
+
+@media screen and (min-width: 800px) {
+  #divCronometro .divCronometro {
+    background: #012c5f;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 12px 16px;
+    position: relative;
+    top: 0;
+  }
 }
 
 #divCronometro .divCronometro p {
@@ -28,10 +54,30 @@ body {
   margin: 0;
 }
 
-#divCronometro .divCronometro #divTiempo {
-  font-weight: 500;
-  font-size: 20px;
-  padding-left: 17%;
+@media screen and (max-width: 799px) {
+  #divCronometro .divCronometro p.desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #divCronometro .divCronometro p.mobile {
+    display: none;
+  }
+}
+
+#divCronometro .divCronometro #chronotime {
+  display: block;
+  width: 72px;
+  padding-left: 2px;
+  color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+  #divCronometro .divCronometro #chronotime {
+    font-weight: 500;
+    width: 100px;
+  }
 }
 
 .puzzleContainer {
@@ -42,6 +88,16 @@ body {
 @media screen and (min-width: 800px) {
   .puzzleContainer {
     width: 60vw;
+  }
+}
+
+.divInstrucciones {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .divInstrucciones {
+    display: block;
   }
 }
 
@@ -73,6 +129,11 @@ body {
 .class_divCarouselContainer #class_buttonPrev svg,
 .class_divCarouselContainer #class_buttonNext svg {
   width: 12px;
+}
+
+.class_divCarouselContainer #class_buttonPrev svg path,
+.class_divCarouselContainer #class_buttonNext svg path {
+  fill: #012c5f;
 }
 
 @media screen and (min-width: 800px) {
