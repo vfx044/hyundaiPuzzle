@@ -28,7 +28,7 @@
 			<div class="puzzleContainer">
 				<div id="divAreasContainer" class="class_divAreasContainer hasInstructions">
 					<!-- Quitar className("hasInstructions") al tomar la primera pieza -->
-					<div class="divTextInstructions">
+					<div id="divTextInstructions" class="divTextInstructions">
 						<p>Coloca las piezas dentro del área que pienses que es la correcta</p>
 					</div>
 					<div id="divAreaP1" class="class_divAreaP1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -98,7 +98,7 @@
 		</section>
 		<!--JS-->
 		<script src="src/jquery/jquery-3.4.1.min.js"></script>
-		<script src="js/overlapping.js"></script>
+		<script src="js/getAndSendVars.js"></script>
 		<script src="js/getID.js"></script>
 		<script src="js/chronos.js"></script>
 		<script src="js/scrollHorz.js"></script>

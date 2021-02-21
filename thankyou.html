@@ -9,6 +9,7 @@
 		<meta http-equiv='pragma' content='no-cache'>
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
 		<link rel="stylesheet" type="text/css" href="css/thank-you.css">
+		<link rel="shortcut icon" href="#" />
 	</head>
 	<body>
 		<section>
@@ -17,8 +18,22 @@
         <p>Has ganado la oportunidad de obtener un upgrade de versión para tu nueva TUCSON 2022.</p>
         <p>Próximamente nos pondremos en contacto contigo para comunicarte los resultados de esta promoción.</p>
       </div>
-      <p><strong>Tiempo <span id="">00:00:00</span></strong></p>
+      <p><strong>Tiempo <span id="spanTextTime">00:00:00</span></strong></p>
       <p>#TUCSON2022</p>
 		</section>
+
+		<script>
+			
+			const __queryString = window.location.search;
+    		const urlParams = new URLSearchParams(__queryString);
+    		let _time = urlParams.get('time');
+
+			console.log("__queryString:", __queryString);
+			console.log("_time:", _time);
+
+			document.getElementById("spanTextTime").innerHTML = _time;
+
+		</script>
+
   </body>
 </html>
