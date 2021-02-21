@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Hyundai Sans Head';
+  src: url('../assets/fonts/HyundaiSansHead-Light.woff') format('woff'),
+      url('../assets/fonts/HyundaiSansHead-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hyundai Sans Head';
+  src: url('../assets/fonts/HyundaiSansHeadMedium.woff') format('woff'),
+      url('../assets/fonts/HyundaiSansHeadMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hyundai Sans Head';
+  src: url('../assets/fonts/HyundaiSansHead.woff') format('woff'),
+      url('../assets/fonts/HyundaiSansHead.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

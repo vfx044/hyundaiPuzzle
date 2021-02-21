@@ -1,0 +1,39 @@
+/************************************************************/
+/**/
+/*   PIEZAS */
+/**/
+/************************************************************/
+
+#divPiecesContainer {
+    display: flex;
+    height: 40px;
+    margin: 0 12px;
+    overflow-x: auto;
+    width: 100%;
+    @media screen and (min-width: 800px) {
+        height: 120px;
+        margin: 0 24px;
+    }
+    div {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex: 0 0 12.5%;
+        height: 40px;
+        width: 12.5%;
+        @media screen and (min-width: 800px) {
+            flex: 0 0 20%;
+            height: 120px;
+            width: 20%;
+        }
+    }
+}
+
+@for $i from 1 through 21 {
+    .class_divP#{$i} {
+        background-image: url("../assets/mobile/piece#{$i}.png");
+        @media screen and (min-width: 800px) {
+            background-image: url("../assets/desktop/piece#{$i}.png");
+        }
+    }
+}

@@ -1,0 +1,107 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Hyundai Sans Head';
+  font-weight: 300;
+  font-size: 16px;
+}
+
+#divCronometro {
+  background-color: #f7f3f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#divCronometro .divCronometro {
+  background: #012c5f;
+  color: #fff;
+  text-align: center;
+  padding: 16px 24px;
+}
+
+#divCronometro .divCronometro p {
+  color: #fff;
+  margin: 0;
+}
+
+#divCronometro .divCronometro #divTiempo {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.puzzleContainer {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .puzzleContainer {
+    width: 60vw;
+  }
+}
+
+.divInstrucciones p {
+  color: #012c5f;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.class_divCarouselContainer {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.class_divCarouselContainer #class_buttonPrev,
+.class_divCarouselContainer #class_buttonNext {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 32px;
+}
+
+.class_divCarouselContainer #class_buttonPrev svg,
+.class_divCarouselContainer #class_buttonNext svg {
+  width: 12px;
+}
+
+@media screen and (min-width: 800px) {
+  .class_divCarouselContainer #class_buttonPrev,
+  .class_divCarouselContainer #class_buttonNext {
+    width: 48px;
+  }
+  .class_divCarouselContainer #class_buttonPrev svg,
+  .class_divCarouselContainer #class_buttonNext svg {
+    width: 24px;
+  }
+}
+
+.class_divCarouselContainer #class_buttonPrev,
+.class_divCarouselContainer #class_buttonNext {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+  .class_divCarouselContainer #class_buttonPrev {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .class_divCarouselContainer #class_buttonNext {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

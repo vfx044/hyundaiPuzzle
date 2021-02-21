@@ -1,0 +1,60 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  align-items: center;
+  background-color: #0a0d1d;
+  background-image: url(../assets/bg-thank-you.jpg);
+  background-position: 16% 70%;
+  background-size: 130% auto;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 100%;
+  @media screen and (min-width:800px){
+    background-position: 36vw;
+    background-size: 64vw;
+  }
+}
+
+body {
+  color: #FFFFFF;
+  font-family: 'Hyundai Sans Head';
+  font-weight: 300;
+  font-size: 16px;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  @media screen and (min-width:800px){
+    font-size: 24px;
+  }
+}
+
+section {
+  display: flex;
+  padding: 7.5vw 5vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+  width: 100%;
+  @media screen and (min-width:800px){
+    padding: 30vh 60vw 4vw 4vw;
+  }
+  h1 {
+    color: #aaaeff;
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin: 0;
+    strong{
+      font-weight: 500;
+    }
+  }
+  > p {
+    font-weight: 300;
+    margin: 0;
+  }
+}

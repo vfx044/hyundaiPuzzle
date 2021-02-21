@@ -1,0 +1,91 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0a0d1d;
+  background-image: url(../assets/bg-thank-you.jpg);
+  background-position: 16% 70%;
+  background-size: 130% auto;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    background-position: 36vw;
+    background-size: 64vw;
+  }
+}
+
+body {
+  color: #FFFFFF;
+  font-family: 'Hyundai Sans Head';
+  font-weight: 300;
+  font-size: 16px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 7.5vw 5vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  section {
+    padding: 30vh 60vw 4vw 4vw;
+  }
+}
+
+section h1 {
+  color: #aaaeff;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin: 0;
+}
+
+section h1 strong {
+  font-weight: 500;
+}
+
+section > p {
+  font-weight: 300;
+  margin: 0;
+}
+/*# sourceMappingURL=thank-you.css.map */

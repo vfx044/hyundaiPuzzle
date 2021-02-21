@@ -1,0 +1,152 @@
+/************************************************************/
+/**/
+/*   AREAS */
+/**/
+/************************************************************/
+.class_divAreasContainer {
+  background-image: url(../assets/bg-mobile.jpg);
+  background-size: cover;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  @media screen and (min-width: 800px) {
+    background-image: url(../assets/bg-desktop.jpg);
+
+  }
+  &:before {
+    background-color: rgba(255,255,255, 0.8);
+    content: '';
+    display: block;
+    padding-top: 128.33%;
+    transition: all 0.2s ease-in;
+    width: 100%;
+    @media screen and (min-width: 800px) {
+      padding-top: 56.25%;
+    }
+  }
+  
+  .divTextInstructions {
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease-in;
+    width: 100%;
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  &.hasInstructions {
+    &:before {
+      background-color: rgba(255,255,255, 0.1);
+    }
+    .divTextInstructions {
+      opacity: 1;
+    }
+  }
+  
+  > div {
+    position: absolute;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+    }
+
+    > div {
+      background-size: cover;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+$pieces: (
+  1: (0.00, 0, 18.54, 151.69),
+  2: (14.17, 0, 60.00, 71.01),
+  3: (74.27, 0, 25.73, 163.16),
+  4: (86.56, 0, 13.44, 83.72),
+  5: (85.42, 75, 14.58, 69.29),
+  6: (75.94, 19, 24.06, 129.44),
+  7: (0.00, 20, 23.96, 143.04),
+  8: (55.73, 34, 44.27, 30.82),
+  9: (25.63, 48, 55.52, 109.38),
+  10: (17.71, 21, 55.10, 55.95),
+  11: (55.42, 46, 44.58, 96.96),
+  12: (30.42, 81, 66.88, 36.45),
+  13: (0.00, 88, 24.27, 38.20),
+  14: (85.83, 56, 14.17, 211.76),
+  15: (0.00, 92, 27.60, 35.47),
+  16: (27.29, 46, 54.79, 79.09),
+  17: (0.00, 48, 28.44, 212.45),
+  18: (0.00, 41, 23.44, 96.89),
+  19: (26.25, 97, 14.27, 28.47),
+  20: (85.00, 81, 15.00, 162.50),
+  21: (13.85, 20, 38.44, 88.89)
+);
+
+$pieces-desktop: (
+  1: (4.06, 0, 47.92, 33.70),
+  2: (40.73, 0, 18.23, 75.43),
+  3: (0.00, 0, 7.29, 218.57),
+  4: (52.92, 0, 27.40, 50.57),
+  5: (66.15, 14, 33.85, 100.92),
+  6: (78.02, 0, 21.98, 47.87),
+  7: (4.17, 25, 48.13, 66.67),
+  8: (52.71, 13, 27.92, 82.46),
+  9: (19.69, 25, 34.69, 93.39),
+  10: (55.00, 14, 26.04, 130.00),
+  11: (66.35, 74, 33.65, 43.34),
+  12: (56.67, 76, 24.17, 56.90),
+  13: (54.38, 55, 11.35, 222.94),
+  14: (19.79, 55, 34.48, 72.81),
+  15: (3.65, 0, 8.54, 187.80),
+  16: (20.31, 85, 24.79, 33.61),
+  17: (91.35, 86, 8.65, 89.16),
+  18: (17.08, 85, 8.13, 105.13),
+  19: (0.00, 85, 18.96, 45.60),
+  20: (0.00, 30, 18.96, 201.10),
+  21: (0.00, 26, 3.23, 248.39)
+);
+
+@each $piece, $prop in $pieces {
+  $left: nth($prop, 1) + %;
+  $top: nth($prop, 2) + %;
+  $width: nth($prop, 3) + %;
+  $paddingTop: nth($prop, 4) + %;
+  .class_divAreaP#{$piece} {
+    left: $left;
+    top: $top;
+    width: $width;
+    &:before {
+      padding-top: $paddingTop;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  @each $piece, $prop in $pieces-desktop {
+    $left: nth($prop, 1) + %;
+    $top: nth($prop, 2) + %;
+    $width: nth($prop, 3) + %;
+    $paddingTop: nth($prop, 4) + %;
+  
+    .class_divAreaP#{$piece} {
+      left: $left;
+      top: $top;
+      width: $width;
+      &:before {
+        padding-top: $paddingTop;
+      }
+    }
+  }
+}

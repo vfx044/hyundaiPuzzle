@@ -1,0 +1,76 @@
+body{ 
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Hyundai Sans Head';
+  font-weight: 300;
+  font-size: 16px;
+}
+
+#divCronometro {
+  background-color: #f7f3f2;
+  display: flex;
+  justify-content: center;
+  .divCronometro {
+    background: #012c5f;
+    color: #fff;
+    text-align: center;
+    padding: 16px 24px;
+    p {
+      color: #fff;
+      margin: 0;
+    }
+    #divTiempo {
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+}
+
+.puzzleContainer {
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (min-width:800px){
+    width: 60vw;
+  }
+}
+
+.divInstrucciones{
+  p {
+    color: #012c5f;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.class_divCarouselContainer {
+  margin: 20px 0;
+  display: flex;
+  #class_buttonPrev,
+  #class_buttonNext {
+    align-items: center;
+    display: flex;
+    width: 32px;
+    svg {
+      width: 12px;
+    }
+    @media screen and (min-width:800px){
+      width: 48px;
+      svg {
+        width: 24px;
+      }
+    }
+  }
+  #class_buttonPrev,
+  #class_buttonNext {
+    justify-content: center;
+  }
+  @media screen and (min-width:800px){
+    #class_buttonPrev {
+      justify-content: flex-start; 
+    }
+    #class_buttonNext {
+      justify-content: flex-end;
+    }
+  }
+}

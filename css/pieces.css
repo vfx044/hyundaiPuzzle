@@ -1,0 +1,253 @@
+/************************************************************/
+/**/
+/*   PIEZAS */
+/**/
+/************************************************************/
+#divPiecesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  margin: 0 12px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  #divPiecesContainer {
+    height: 120px;
+    margin: 0 24px;
+  }
+}
+
+#divPiecesContainer div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 12.5%;
+          flex: 0 0 12.5%;
+  height: 40px;
+  width: 12.5%;
+}
+
+@media screen and (min-width: 800px) {
+  #divPiecesContainer div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    height: 120px;
+    width: 20%;
+  }
+}
+
+.class_divP1 {
+  background-image: url("../assets/mobile/piece1.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP1 {
+    background-image: url("../assets/desktop/piece1.png");
+  }
+}
+
+.class_divP2 {
+  background-image: url("../assets/mobile/piece2.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP2 {
+    background-image: url("../assets/desktop/piece2.png");
+  }
+}
+
+.class_divP3 {
+  background-image: url("../assets/mobile/piece3.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP3 {
+    background-image: url("../assets/desktop/piece3.png");
+  }
+}
+
+.class_divP4 {
+  background-image: url("../assets/mobile/piece4.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP4 {
+    background-image: url("../assets/desktop/piece4.png");
+  }
+}
+
+.class_divP5 {
+  background-image: url("../assets/mobile/piece5.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP5 {
+    background-image: url("../assets/desktop/piece5.png");
+  }
+}
+
+.class_divP6 {
+  background-image: url("../assets/mobile/piece6.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP6 {
+    background-image: url("../assets/desktop/piece6.png");
+  }
+}
+
+.class_divP7 {
+  background-image: url("../assets/mobile/piece7.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP7 {
+    background-image: url("../assets/desktop/piece7.png");
+  }
+}
+
+.class_divP8 {
+  background-image: url("../assets/mobile/piece8.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP8 {
+    background-image: url("../assets/desktop/piece8.png");
+  }
+}
+
+.class_divP9 {
+  background-image: url("../assets/mobile/piece9.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP9 {
+    background-image: url("../assets/desktop/piece9.png");
+  }
+}
+
+.class_divP10 {
+  background-image: url("../assets/mobile/piece10.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP10 {
+    background-image: url("../assets/desktop/piece10.png");
+  }
+}
+
+.class_divP11 {
+  background-image: url("../assets/mobile/piece11.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP11 {
+    background-image: url("../assets/desktop/piece11.png");
+  }
+}
+
+.class_divP12 {
+  background-image: url("../assets/mobile/piece12.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP12 {
+    background-image: url("../assets/desktop/piece12.png");
+  }
+}
+
+.class_divP13 {
+  background-image: url("../assets/mobile/piece13.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP13 {
+    background-image: url("../assets/desktop/piece13.png");
+  }
+}
+
+.class_divP14 {
+  background-image: url("../assets/mobile/piece14.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP14 {
+    background-image: url("../assets/desktop/piece14.png");
+  }
+}
+
+.class_divP15 {
+  background-image: url("../assets/mobile/piece15.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP15 {
+    background-image: url("../assets/desktop/piece15.png");
+  }
+}
+
+.class_divP16 {
+  background-image: url("../assets/mobile/piece16.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP16 {
+    background-image: url("../assets/desktop/piece16.png");
+  }
+}
+
+.class_divP17 {
+  background-image: url("../assets/mobile/piece17.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP17 {
+    background-image: url("../assets/desktop/piece17.png");
+  }
+}
+
+.class_divP18 {
+  background-image: url("../assets/mobile/piece18.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP18 {
+    background-image: url("../assets/desktop/piece18.png");
+  }
+}
+
+.class_divP19 {
+  background-image: url("../assets/mobile/piece19.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP19 {
+    background-image: url("../assets/desktop/piece19.png");
+  }
+}
+
+.class_divP20 {
+  background-image: url("../assets/mobile/piece20.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP20 {
+    background-image: url("../assets/desktop/piece20.png");
+  }
+}
+
+.class_divP21 {
+  background-image: url("../assets/mobile/piece21.png");
+}
+
+@media screen and (min-width: 800px) {
+  .class_divP21 {
+    background-image: url("../assets/desktop/piece21.png");
+  }
+}
+/*# sourceMappingURL=pieces.css.map */
