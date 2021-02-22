@@ -57,9 +57,12 @@ let _zIndex = 30;
 let _countDown;
 let _textInst = true;
 
+let _section = 1;
+let _arrayOfSlidesLength = 3;
+let _slideIndex = 1;
+let _plusLess = 1;
 
-//localhost/dev/HYUNDAI/PUZZLE_REPO/hyundaiPuzzle/
-//localhost/dev/HYUNDAI/PUZZLE_REPO/hyundaiPuzzle/index.html?token=MTIzNDU2Nzg&email=totoro@ghibli.com
+let _mySetTime;
 
 //----------------------------------------------------------//
 //
@@ -69,20 +72,45 @@ let _textInst = true;
 
 function init(){
     console.log("^-^ INIT");
-    
+
     getUrlVars();
     getTimeStamp();
     chronoStart();
     getPercentFromWidthDiv(); //scrollHorz.js
+    getDataFromPiecesAndAreas(); //getLTWH.js
+
+    //var __checkMobile = true;
+    //if(__checkMobile){
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        // true for mobile device
+        console.log("MOBILE");
+
+        divTextInstructions.innerHTML = "<p>Coloca las piezas dentro del área que pienses que es la correcta</p>"+
+                                        '<p style="font-size: 14px;">Utiliza las flechas de navegación<br> para visualizar más piezas.</p>'
+
+        _arrayOfSlidesLength = 4;
+        setUpDragMobile();
+    } else {
+        _arrayOfSlidesLength = 3;
+        setUpDragDesktop();
+    } //else
+
+    buttonBack.style.display = "none";
 
     //------------------------------------------ BUTTONS BACK & NEXT - ADD EVENT LISTENER
     buttonBack.addEventListener('click', ()=>{
-        move_right();
+        showAndHideDivSection(-1);
     });
 
     buttonNext.addEventListener('click', ()=>{
-        move_left();
+        showAndHideDivSection(1);
     });
+
+    
+    _mySetTime = setTimeout(function(){ 
+        divTextInstructions.style.opacity = 0;
+    }, 3000);
+
 }
 
 //----------------------------------------------------------//
@@ -94,78 +122,130 @@ function init(){
 function getTimeStamp(){
     var d = new Date();
     _timeStamp = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() + "_" + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-    console.log("_timeStamp:", _timeStamp);
+    //console.log("_timeStamp:", _timeStamp);
 }
 
 //----------------------------------------------------------//
 //
-// DRAG & DROP FUNCTION
+// MENU PIECES
 //
 //----------------------------------------------------------//
 
-function drag(ev) {
-    console.log("drag");
-    ev.dataTransfer.setData("text", ev.target.id);
-    //console.log("ev.target.id:", ev.target.id);
+function hideBackAndNextButton(){
+    buttonBack.style.display = "none";
+    buttonNext.style.display = "none";
+}
 
-    var __numIdPieza = getNumberFromIdfromPieza(ev.target.id);
-    //console.log("__numIdPieza:", __numIdPieza);
-
-    document.getElementById(ev.target.id).style.zIndex = _zIndex++;
-    document.getElementById(ev.target.id).classList.add("activeDrag");
-    document.getElementById("divAreaP" + __numIdPieza).style.zIndex = _zIndex++;
+function hideAllSlidersMobile(__indexSlider){
     
-    //hideAllAreas(__numIdPieza);
-    if(_textInst){
-        _textInst = false;
-        divTextInstructions.style.opacity = 0;
-    } //if
-}
+    for (let i = 0; i < 21; i++) {
+        if(_arrayPiecesRight[i] == 0){
+            document.getElementById("divDragP" + (i+1) ).style.display = "none";  
+        }//if
+    } //for
 
-function allowDrop(ev) {
-    console.log("allowDrop");
-    ev.preventDefault(divP1);
-}
-  
-function drop(ev) {
-    console.log("drop");
-    ev.preventDefault();
-    //console.log("id area:", ev.target.id);
-
-    var data = ev.dataTransfer.getData("text");
-    //console.log("id pieza:", data);
-
-    var __numIdArea = getNumberFromIdfromArea(ev.target.id);
-    var __numIdPieza = getNumberFromIdfromPieza(data);
-    //console.log(__numIdArea, __numIdPieza);
-
-    if(__numIdPieza == __numIdArea){
-        ev.target.appendChild(document.getElementById(data));
-        document.getElementById(data).ondragstart = function () { return false; };
-        document.getElementById("divP"+__numIdPieza).style.zIndex = "30";
-        document.getElementById("divAreaP"+__numIdArea).style.zIndex = "30";
-        document.getElementById("divAreaP"+__numIdArea).classList.remove("activeDrag");
-        _picesRightPosition++;
-        checkFinishPuzzle();
-    }//if
-
-}
-
-//----------------------------------------------------------//
-//
-// HIDE ALL AREAS
-//
-//----------------------------------------------------------//
-
-function hideAllAreas(__numIdPieza){
-
-    /*
-    for (let i = 0; i < _totalOfAreas; i++) {
-        document.getElementById("divAreaP" + (i + 1)).style.display = "none"; 
-    }//for
+    switch(__indexSlider){
+        case 1:
+            for (let i = 0; i < 6; i++) {
+                if(_arrayPiecesRight[i] == 0){
+                    document.getElementById("divDragP" + (i+1) ).style.display = "block"; 
+                }//if
+            }//for
+        break;
+        case 2:
+            for (let i = 6; i < 12; i++) {
+                if(_arrayPiecesRight[i] == 0){
+                    document.getElementById("divDragP" + (i+1) ).style.display = "block"; 
+                }//if
+            }//for
+        break;
+        case 3:
+            for (let i = 12; i < 18; i++) {
+                if(_arrayPiecesRight[i] == 0){
+                    document.getElementById("divDragP" + (i+1) ).style.display = "block"; 
+                }//if
+            }//for
+        break;
+        case 4:
+            for (let i = 18; i < 21; i++) {
+                if(_arrayPiecesRight[i] == 0){
+                    document.getElementById("divDragP" + (i+1) ).style.display = "block"; 
+                }//if
+            }//for
+        break;
+    }//switch
     
-    document.getElementById("divAreaP" + __numIdPieza).style.display = "block";
-    */ 
+}
+
+function hideAllSliders(__indexSlider){
+    
+    for (let i = 0; i < 21; i++) {
+        if(_arrayPiecesRight[i] == 0){
+            document.getElementById("divDragP" + (i+1) ).style.display = "none";  
+        }//if
+    } //for
+
+    switch(__indexSlider){
+        case 1:
+            for (let i = 0; i < 8; i++) {
+                if(_arrayPiecesRight[i] == 0){
+                    document.getElementById("divDragP" + (i+1) ).style.display = "block"; 
+                }//if
+            }//for
+        break;
+        case 2:
+            for (let i = 8; i < 16; i++) {
+                if(_arrayPiecesRight[i] == 0){
+                    document.getElementById("divDragP" + (i+1) ).style.display = "block"; 
+                }//if
+            }//for
+        break;
+        case 3:
+            for (let i = 16; i < 21; i++) {
+                if(_arrayPiecesRight[i] == 0){
+                    document.getElementById("divDragP" + (i+1) ).style.display = "block"; 
+                }//if
+            }//for
+        break;
+    }//switch
+    
+}
+
+function showAndHideDivSection(__moreless){
+
+    if(__moreless > 0){
+
+        _slideIndex++;
+        buttonBack.style.display = "flex"; 
+
+        if(_slideIndex >= _arrayOfSlidesLength){
+            _slideIndex = _arrayOfSlidesLength;
+            buttonNext.style.display = "none"; 
+        } //else
+
+    } else if(__moreless < 0){
+        
+        _slideIndex--;
+        buttonNext.style.display = "flex";
+
+        if(_slideIndex <= 1){
+            _slideIndex = 1;
+            buttonBack.style.display = "none"; 
+        } //else
+
+    } //else
+    
+    //var __checkMobile = true;
+    //if(__checkMobile){
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        // true for mobile device
+        //console.log("MOBILE");
+        hideAllSlidersMobile(_slideIndex);
+    } else {
+        hideAllSliders(_slideIndex);
+    } //else
+
+    //document.getElementById( "divPiecesContainer" + _slideIndex ).style.display = "block";
 
 }
 
@@ -177,7 +257,9 @@ function hideAllAreas(__numIdPieza){
 
 function checkFinishPuzzle(){
 
-    if(_picesRightPosition == _totalOfPieces){
+    console.log("checkFinishPuzzle", _totalOfPieces);
+
+    if(_picesRightPosition >= _totalOfPieces){
         
         //console.log("YOU WIN");
         chronoStop(); //chronos.js
@@ -204,6 +286,8 @@ function ShowFinalMessage(){
     divTextInstructions.style.opacity = 1;
 
 }
+
+
 
 
 window.onload = init();

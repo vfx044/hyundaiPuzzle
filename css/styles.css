@@ -35,17 +35,14 @@ body {
 @media screen and (min-width: 800px) {
   #divCronometro .divCronometro {
     background: #012c5f;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: 20px;
+    font-size: 16px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     padding: 12px 16px;
     position: relative;
     top: 0;
+    width: auto;
   }
 }
 
@@ -76,7 +73,8 @@ body {
 @media screen and (min-width: 800px) {
   #divCronometro .divCronometro #chronotime {
     font-weight: 500;
-    width: 100px;
+    padding-left: 6px;
+    width: 80px;
   }
 }
 
@@ -165,5 +163,75 @@ body {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalBox {
+  background-color: #fff;
+}
+
+.modalBoxHeader, .modalBoxBody {
+  padding: 12px 24px;
+}
+
+.modalBoxHeader {
+  background-color: #012c5f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 12px;
+}
+
+.modalBoxHeader h2 {
+  color: #fff;
+  margin: 0;
+}
+
+.modalBoxHeader .modalClose {
+  cursor: pointer;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.modalBoxHeader .modalClose svg path {
+  fill: #FFF;
+}
+
+.modalBoxBody {
+  font-size: 18px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -14,6 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link rel="stylesheet" type="text/css" href="css/pieces.css">
 		<link rel="stylesheet" type="text/css" href="css/areas.css">
+
 	</head>
 	<body>
 		<section>
@@ -30,34 +31,34 @@
 					<div id="divTextInstructions" class="divTextInstructions">
 						<p>Coloca las piezas dentro del área que pienses que es la correcta</p>
 					</div>
-					<div id="divAreaP1" class="class_divAreaP1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP2" class="class_divAreaP2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<!---->
-					<div id="divAreaP3" class="class_divAreaP3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP4" class="class_divAreaP4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP5" class="class_divAreaP5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP6" class="class_divAreaP6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP7" class="class_divAreaP7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP8" class="class_divAreaP8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP9" class="class_divAreaP9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP10" class="class_divAreaP10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP11" class="class_divAreaP11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP12" class="class_divAreaP12" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP13" class="class_divAreaP13" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP14" class="class_divAreaP14" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP15" class="class_divAreaP15" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP16" class="class_divAreaP16" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP17" class="class_divAreaP17" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP18" class="class_divAreaP18" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP19" class="class_divAreaP19" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP20" class="class_divAreaP20" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div id="divAreaP21" class="class_divAreaP21" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+					<!-- Estos divs van a ser únicamente de referencia
+					Cuando la pagina cargue, hay que obtener la posicion absoluta de cada uno de estos divs -->
+					<div id="divAreaP1" class="class_divAreaP1"></div>
+					<div id="divAreaP2" class="class_divAreaP2"></div>
+					<div id="divAreaP3" class="class_divAreaP3"></div>
+					<div id="divAreaP4" class="class_divAreaP4"></div>
+					<div id="divAreaP5" class="class_divAreaP5"></div>
+					<div id="divAreaP6" class="class_divAreaP6"></div>
+					<div id="divAreaP7" class="class_divAreaP7"></div>
+					<div id="divAreaP8" class="class_divAreaP8"></div>
+					<div id="divAreaP9" class="class_divAreaP9"></div>
+					<div id="divAreaP10" class="class_divAreaP10"></div>
+					<div id="divAreaP11" class="class_divAreaP11"></div>
+					<div id="divAreaP12" class="class_divAreaP12"></div>
+					<div id="divAreaP14" class="class_divAreaP14"></div>
+					<div id="divAreaP15" class="class_divAreaP15"></div>
+					<div id="divAreaP16" class="class_divAreaP16"></div>
+					<div id="divAreaP17" class="class_divAreaP17"></div>
+					<div id="divAreaP18" class="class_divAreaP18"></div>
+					<div id="divAreaP19" class="class_divAreaP19"></div>
+					<div id="divAreaP20" class="class_divAreaP20"></div>
+					<div id="divAreaP21" class="class_divAreaP21"></div>
+					<div id="divAreaP13" class="class_divAreaP13"></div>
 				</div>
 				<div class="divInstrucciones">
 					<p>Utiliza las flechas de navegación para visualizar más piezas.</p>
 				</div>
 				<div class="class_divCarouselContainer">
-					<!-- Para las flechas, agregar la función condicional move_right() o move_left() según el caso del file scrollHorz.js -->
 					<div id="class_buttonPrev">
 						<svg version="1.1" id="b40cf9c3-5134-4b4f-82b6-1775d4dac10c" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32.7 61.3" style="enable-background:new 0 0 32.7 61.3;" xml:space="preserve">
 							<path class="st0" d="M30.7,61.3c1.1,0,2-0.9,2-2c0-0.5-0.2-1-0.6-1.4L4.8,30.6L32,3.4c0.8-0.8,0.8-2.1,0-2.8s-2.1-0.8-2.8,0 L0.6,29.1C0.2,29.5,0,30,0,30.6c0,0.5,0.2,1.1,0.6,1.4l28.7,28.7C29.7,61.1,30.2,61.3,30.7,61.3z"/>
@@ -86,6 +87,7 @@
 						<div id="divP19" class="class_divP19" draggable="true" ondragstart="drag(event)"></div>
 						<div id="divP20" class="class_divP20" draggable="true" ondragstart="drag(event)"></div>
 						<div id="divP21" class="class_divP21" draggable="true" ondragstart="drag(event)"></div>
+						
 					</div>
 					<div id="class_buttonNext">
 						<svg version="1.1" id="b40cf9c3-5134-4b4f-82b6-1775d4dac10c" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32.7 61.3" style="enable-background:new 0 0 32.7 61.3;" xml:space="preserve">
@@ -95,12 +97,54 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Estos DIVs son los que se van a arrastrar, los otros son sólo se referencia -->
+		<div id="divDragP1" class="class_divP1 class_divDraggable"></div>
+		<div id="divDragP2" class="class_divP2 class_divDraggable"></div>
+		<div id="divDragP3" class="class_divP3 class_divDraggable"></div>
+		<div id="divDragP4" class="class_divP4 class_divDraggable"></div>
+		<div id="divDragP5" class="class_divP5 class_divDraggable"></div>
+		<div id="divDragP6" class="class_divP6 class_divDraggable"></div>
+		<div id="divDragP7" class="class_divP7 class_divDraggable"></div>
+		<div id="divDragP8" class="class_divP8 class_divDraggable"></div>
+		
+		<div id="divDragP9" class="class_divP9 class_divDraggable2"></div>
+		<div id="divDragP10" class="class_divP10 class_divDraggable2"></div>
+		<div id="divDragP11" class="class_divP11 class_divDraggable2"></div>
+		<div id="divDragP12" class="class_divP12 class_divDraggable2"></div>
+		<div id="divDragP13" class="class_divP13 class_divDraggable2"></div>
+		<div id="divDragP14" class="class_divP14 class_divDraggable2"></div>		
+		<div id="divDragP15" class="class_divP15 class_divDraggable2"></div>
+		<div id="divDragP16" class="class_divP16 class_divDraggable2"></div>
+		
+		<div id="divDragP17" class="class_divP17 class_divDraggable3"></div>
+		<div id="divDragP18" class="class_divP18 class_divDraggable3"></div>
+		<div id="divDragP19" class="class_divP19 class_divDraggable3"></div>
+		<div id="divDragP20" class="class_divP20 class_divDraggable3"></div>
+		<div id="divDragP21" class="class_divP21 class_divDraggable3"></div>
+
+		<div id="modal" class="modal open">
+			<div class="modalBox">
+				<div class="modalBoxHeader">
+					<h2>MENSAJE IMPORTANTE</h2>
+				</div>
+				<div class="modalBoxBody">
+					<p>Recuerda que solo puedes participar una vez.</p>
+				</div>
+			</div>
+		</div>
+		
 		<!--JS-->
 		<script src="src/jquery/jquery-3.4.1.min.js"></script>
+		<script src="src/interact/interact.min.js"></script>
+
 		<script src="js/getAndSendVars.js"></script>
 		<script src="js/getID.js"></script>
 		<script src="js/chronos.js"></script>
 		<script src="js/scrollHorz.js"></script>
+		<script src="js/dragPieces.js"></script>
+		<script src="js/overlapping.js"></script>
+		<script src="js/getLTWH.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

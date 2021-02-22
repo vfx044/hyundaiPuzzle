@@ -250,4 +250,46 @@
     background-image: url("../assets/desktop/piece21.png");
   }
 }
+
+.class_divDraggable {
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -ms-touch-action: none;
+      touch-action: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: aquamarine;
+}
+
+.class_divDraggable2 {
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -ms-touch-action: none;
+      touch-action: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #f57543;
+}
+
+.class_divDraggable3 {
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -ms-touch-action: none;
+      touch-action: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #43a5f5;
+}
 /*# sourceMappingURL=pieces.css.map */

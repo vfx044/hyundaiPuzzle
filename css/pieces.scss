@@ -37,3 +37,36 @@
         }
     }
 }
+
+.class_divDraggable {
+    position: absolute;
+    user-select: none;
+    touch-action: none;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: aquamarine;
+}
+
+.class_divDraggable2 {
+    position: absolute;
+    user-select: none;
+    touch-action: none;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(245, 117, 67);
+  }
+  
+  .class_divDraggable3 {
+    position: absolute;
+    user-select: none;
+    touch-action: none;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(67, 165, 245);
+  }

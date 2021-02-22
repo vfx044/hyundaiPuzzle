@@ -30,8 +30,8 @@ function chrono(){
 		msec = "0" + msec;
 	} //if
 
-	//document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec + ":" + msec;
-	document.getElementById("chronotime").innerHTML = min + ":" + sec + ":" + msec;
+	//document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec + "." + msec;
+	document.getElementById("chronotime").innerHTML = min + ":" + sec + "." + msec;
 	timerID = setTimeout("chrono()", 10);
 }
 
